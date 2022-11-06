@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extracting-algorithm", "extracting-algorithm.csproj", "{2461CB23-3216-473F-9E16-DCF76E775595}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extracting-algo", "extracting-algo.csproj", "{B8795A44-B6E4-4D2C-BC69-C1B8B8A29BE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2461CB23-3216-473F-9E16-DCF76E775595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2461CB23-3216-473F-9E16-DCF76E775595}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2461CB23-3216-473F-9E16-DCF76E775595}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2461CB23-3216-473F-9E16-DCF76E775595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8795A44-B6E4-4D2C-BC69-C1B8B8A29BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8795A44-B6E4-4D2C-BC69-C1B8B8A29BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8795A44-B6E4-4D2C-BC69-C1B8B8A29BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8795A44-B6E4-4D2C-BC69-C1B8B8A29BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C75A8B84-0071-4D33-AC8A-3F95A4CA1C85}
+		SolutionGuid = {7DF78A14-4940-4C04-B261-562C8EBFDD5A}
 	EndGlobalSection
 EndGlobal
