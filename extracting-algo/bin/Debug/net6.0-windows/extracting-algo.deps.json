@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "extracting-algo/1.0.0": {
+        "runtime": {
+          "extracting-algo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "extracting-algo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

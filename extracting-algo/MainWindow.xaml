@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        ResizeMode="NoResize"
         xmlns:local="clr-namespace:extracting_algo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="440" Width="303">
+    <Button x:Name="browse" Content="Browse" HorizontalAlignment="Left" Height="35" Margin="208,69,0,0" VerticalAlignment="Top" Width="52" Click="BrowseFiles"/>
 </Window>
