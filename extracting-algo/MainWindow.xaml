@@ -6,6 +6,9 @@
         ResizeMode="NoResize"
         xmlns:local="clr-namespace:extracting_algo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="440" Width="303">
-    <Button x:Name="browse" Content="Browse" HorizontalAlignment="Left" Height="35" Margin="208,69,0,0" VerticalAlignment="Top" Width="52" Click="BrowseFiles"/>
+        Title="Converter" Height="440" Width="303">
+    <Grid>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,81,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox"/>
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="23,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/file.html"/>
+    </Grid>
 </Window>

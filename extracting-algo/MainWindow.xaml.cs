@@ -24,7 +24,6 @@ namespace extracting_algo
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Converter GUI Edition :)"; //Name is subject to change
         }
 
         private void BrowseFiles(object sender, RoutedEventArgs e)
@@ -32,10 +31,10 @@ namespace extracting_algo
             Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
             Nullable<bool> result = openFileDlg.ShowDialog();
             if (result == true)
-            {/*
-                FileNameTextBox.Text = openFileDlg.FileName;
-                TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);*/
-                Process.Start(openFileDlg.FileName);
+            {
+                var tag = (TextBox)this.FindName((sender as FrameworkElement).Tag.ToString());
+                textbox.Text = openFileDlg.FileName;
+                //Process.Start(openFileDlg.FileName);
             }
         }
     }
