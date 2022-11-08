@@ -35,15 +35,22 @@ namespace extracting_algo
             {
                 var tag = (TextBox)this.FindName((sender as FrameworkElement).Tag.ToString());
                 tag.Text = openFileDlg.FileName;
-                //Process.Start(openFileDlg.FileName);
             }
         }
 
         private void StartConversion(object sender, RoutedEventArgs e)
         {
+            this.Title = "Starting... - Converter";
             globals.pathToHTML = textbox.Text;
             globals.pathToExcel = textbox2.Text;
             globals.pathToOutput = textbox3.Text;
+            //Debug
+            var confirm = MessageBox.Show("Path to HTML: "+ globals.pathToHTML + "\nPath to Excel: " + globals.pathToExcel + "\nPath to output folder: " + globals.pathToOutput, "Is this information right?", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if (confirm == MessageBoxResult.OK)
+            {
+                //Convert
+                Convert.ConvertToExcel(globals.pathToHTML, globals.pathToExcel, globals.pathToOutput);
+            }
         }
 
         private void BrowseFolder(object sender, RoutedEventArgs e)
