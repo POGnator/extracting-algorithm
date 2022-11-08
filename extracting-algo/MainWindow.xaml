@@ -9,6 +9,11 @@
         Title="Converter" Height="440" Width="303">
     <Grid>
         <Button Content="Browse" HorizontalAlignment="Left" Margin="243,81,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox"/>
-        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="23,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/file.html"/>
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="23,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input1.html"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,115,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox2"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="23,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input2.xlsx"/>
+        <Button Content="Start" HorizontalAlignment="Left" Margin="250,376,0,0" VerticalAlignment="Top" Click="StartConversion"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,151,0,0" VerticalAlignment="Top" Click="BrowseFolder" Height="18" Tag="textbox2"/>
+        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="23,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/output/folder/"/>
     </Grid>
 </Window>

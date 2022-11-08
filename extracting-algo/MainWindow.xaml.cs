@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace extracting_algo
 {
@@ -33,8 +34,26 @@ namespace extracting_algo
             if (result == true)
             {
                 var tag = (TextBox)this.FindName((sender as FrameworkElement).Tag.ToString());
-                textbox.Text = openFileDlg.FileName;
+                tag.Text = openFileDlg.FileName;
                 //Process.Start(openFileDlg.FileName);
+            }
+        }
+
+        private void StartConversion(object sender, RoutedEventArgs e)
+        {
+            globals.pathToHTML = textbox.Text;
+            globals.pathToExcel = textbox2.Text;
+            globals.pathToOutput = textbox3.Text;
+        }
+
+        private void BrowseFolder(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.InitialDirectory = "C:\\";
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                textbox3.Text = dialog.FileName;
             }
         }
     }

@@ -19,3 +19,8 @@ C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\extracting-algo.pdb
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\extracting-algo.genruntimeconfig.cache
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\ref\extracting-algo.dll
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\extracting-algo.csproj.ResolveComReference.cache
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\extracting-algo.csproj.CopyComplete

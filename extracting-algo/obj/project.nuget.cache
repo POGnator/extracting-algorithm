@@ -1,8 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "RdIAQCjMZOwniN4qiPiYagnkafpBIswbdfN7hdqznUe+lDIrBddo+2CT1uWMMaL0HMHJrfAn+gu3j6xUGGCtmQ==",
+  "dgSpecHash": "BXnYtU4qW63AFk7U0ICj4vasNcBoOoLur9G/vi4OBSb4Mr8WIp+/Ea2YZJNN7/jJvvgKjjXQBGldoN0dbihxlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel\\Documents\\GitHub\\extracting-algorithm\\extracting-algo\\extracting-algo.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.windowsapicodepack-core\\1.1.0\\microsoft.windowsapicodepack-core.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.windowsapicodepack-shell\\1.1.0\\microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Microsoft.WindowsAPICodePack-Core 1.1.0\" wurde nicht mit dem Projektzielframework \"net6.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Microsoft.WindowsAPICodePack-Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"Microsoft.WindowsAPICodePack-Shell 1.1.0\" wurde nicht mit dem Projektzielframework \"net6.0-windows7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "Microsoft.WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
