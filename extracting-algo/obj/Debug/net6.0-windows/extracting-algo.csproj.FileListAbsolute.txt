@@ -24,3 +24,4 @@ C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.ShellExtensions.dll
 C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\extracting-algo.csproj.CopyComplete
+C:\Users\Gabriel\Documents\GitHub\extracting-algorithm\extracting-algo\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll

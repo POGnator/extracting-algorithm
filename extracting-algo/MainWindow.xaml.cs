@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace extracting_algo
         public MainWindow()
         {
             InitializeComponent();
+            //Install the required packages if not present
+            System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
+            proc.FileName = @"C:\windows\system32\cmd.exe";
+            proc.Arguments = @"\c py ./pip/__main__.py install pandas openpyxl";
+            System.Diagnostics.Process.Start(proc);
         }
 
         private void BrowseFiles(object sender, RoutedEventArgs e)
@@ -51,6 +57,7 @@ namespace extracting_algo
                 //Convert
                 Convert.ConvertToExcel(globals.pathToHTML, globals.pathToExcel, globals.pathToOutput);
             }
+            this.Title = "Converter";
         }
 
         private void BrowseFolder(object sender, RoutedEventArgs e)
