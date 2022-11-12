@@ -27,10 +27,16 @@ namespace extracting_algo
         {
             InitializeComponent();
             //Install the required packages if not present
-            System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
-            proc.FileName = @"C:\windows\system32\cmd.exe";
-            proc.Arguments = @"\c py ./pip/__main__.py install pandas openpyxl";
-            System.Diagnostics.Process.Start(proc);
+            string strCmdText;
+            strCmdText = "/C py ./pip/__main__.py install pandas openpyxl && PowerShell -Command \"Add-Type -AssemblyName PresentationFramework;[System.Windows.MessageBox]::Show('All required packages were installed', 'Success')";
+            try
+            {
+                System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+            }
+            catch
+            {
+                MessageBox.Show("Python is not installed, but can be at\nhttps://www.python.org/downloads/", "Error - Python not found", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void BrowseFiles(object sender, RoutedEventArgs e)
