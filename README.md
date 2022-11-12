@@ -11,7 +11,7 @@ Open Source GUI Application for special purposes
 * .NET 6.0
 * Visual Studio 2022
 > Older versions could work.
-
+## Instructions
 * From your pip install, copy the "pip" folder into "extracting-algo\bin\Release\net6.0-windows".
 * Do the same with main.py in root.
 * Open the VS project.
