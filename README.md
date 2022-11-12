@@ -24,3 +24,6 @@ Open Source GUI Application for special purposes
 * Create a branch.
 
 Please keep the code as clean as possible.
+
+# 🧾 ToDo
+* Rewrite German to English in main.py
