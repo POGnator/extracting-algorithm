@@ -26,6 +26,7 @@ namespace extracting_algo
         public MainWindow()
         {
             InitializeComponent();
+            
             //Install the required packages if not present
             string strCmdText;
             strCmdText = "/C py ./pip/__main__.py install pandas openpyxl && PowerShell -Command \"Add-Type -AssemblyName PresentationFramework;[System.Windows.MessageBox]::Show('All required packages were installed', 'Success')";
@@ -75,6 +76,12 @@ namespace extracting_algo
             {
                 textbox3.Text = dialog.FileName;
             }
+        }
+
+        private void ShowHelp(object sender, RoutedEventArgs e)
+        {
+            Window1 win1 = new Window1();
+            win1.Show();
         }
     }
 }

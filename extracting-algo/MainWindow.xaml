@@ -6,14 +6,19 @@
         ResizeMode="NoResize"
         xmlns:local="clr-namespace:extracting_algo"
         mc:Ignorable="d"
-        Title="Converter" Height="440" Width="303">
-    <Grid>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,81,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox"/>
-        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="23,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input1.html"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,115,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox2"/>
-        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="23,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input2.xlsx"/>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="250,376,0,0" VerticalAlignment="Top" Click="StartConversion"/>
-        <Button Content="Browse" HorizontalAlignment="Left" Margin="243,151,0,0" VerticalAlignment="Top" Click="BrowseFolder" Height="18" Tag="textbox2"/>
-        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="23,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/output/folder/"/>
+        Title="Converter" Height="440" Width="303" Background="#FFFCFF00">
+    <Grid Background="#FF2B775E">
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="234,54,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox" BorderBrush="White"/>
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="23,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input1.html" Background="{x:Null}" Foreground="White"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="234,115,0,0" VerticalAlignment="Top" Click="BrowseFiles" Height="18" Tag="textbox2" BorderBrush="White"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="23,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/input2.xlsx" Background="{x:Null}" Foreground="White"/>
+        <Button Content="Start converting" HorizontalAlignment="Left" Margin="23,336,0,0" VerticalAlignment="Top" Click="StartConversion" Height="52" Width="250" Foreground="#FF2D0000"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="234,240,0,0" VerticalAlignment="Top" Click="BrowseFolder" Height="18" Tag="textbox2" BorderBrush="White"/>
+        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="23,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/output/folder/" Background="{x:Null}" Foreground="White"/>
+        <Label Content="File to search through" HorizontalAlignment="Left" Margin="23,28,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Excel database" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Output folder" HorizontalAlignment="Left" Margin="23,214,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Public main, 1.0" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Foreground="White" Height="23" Width="103" FontSize="8"/>
+        <Button Content="?" HorizontalAlignment="Left" Margin="252,4,0,0" VerticalAlignment="Top" Height="15" Tag="textbox" BorderBrush="White" Width="21" FontSize="8" Click="ShowHelp"/>
     </Grid>
 </Window>
