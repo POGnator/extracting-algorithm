@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        ResizeMode="NoResize"
         xmlns:local="clr-namespace:extracting_algo"
         mc:Ignorable="d"
-        Title="Help" Height="174" Width="339">
+        Title="Help" Height="174" Width="275">
     <Grid>
         <Label Content="(c) POGnator, 2022" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="For further help, please consult the README" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="28" Width="255"/>
         <Label Content="that ships with this program." HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Height="28" Width="255"/>
-        <Label Content="Hosted on GitHub at https://github.com/POGnator/extracting-algorithm" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top" Height="28" Width="319" FontSize="8"/>
-
+        <Label x:Name="boxi" Content="Open Sourced on GitHub!" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" Height="28" Width="103" FontSize="8" PreviewMouseDown="OpenLink" Foreground="#FF0000EE"/>
     </Grid>
 </Window>

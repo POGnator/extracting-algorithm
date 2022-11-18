@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,17 @@ namespace extracting_algo
         public Window1()
         {
             InitializeComponent();
+        }
+
+        private void OpenLink(object sender, MouseButtonEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/POGnator/extracting-algorithm",
+                UseShellExecute = true
+            });
+            var bc = new BrushConverter();
+            boxi.Foreground = (Brush)bc.ConvertFrom("#551A8B");
         }
     }
 }

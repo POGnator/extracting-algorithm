@@ -17,7 +17,7 @@
         <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="23,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Text="/path/to/output/folder/" Background="{x:Null}" Foreground="White"/>
         <Label Content="File to search through" HorizontalAlignment="Left" Margin="23,28,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
         <Label Content="Excel database" HorizontalAlignment="Left" Margin="23,89,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-        <Label Content="Output folder" HorizontalAlignment="Left" Margin="23,214,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Output folder" HorizontalAlignment="Left" Margin="23,214,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Width="92"/>
         <Label Content="Public main, 1.0" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Foreground="White" Height="23" Width="103" FontSize="8"/>
         <Button Content="?" HorizontalAlignment="Left" Margin="252,4,0,0" VerticalAlignment="Top" Height="15" Tag="textbox" BorderBrush="White" Width="21" FontSize="8" Click="ShowHelp"/>
     </Grid>
