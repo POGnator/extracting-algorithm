@@ -26,7 +26,7 @@ namespace extracting_algo
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.Title = "Converter";
             //Install the required packages if not present
             string strCmdText;
             strCmdText = "/C py ./pip/__main__.py install pandas openpyxl && PowerShell -Command \"Add-Type -AssemblyName PresentationFramework;[System.Windows.MessageBox]::Show('All required packages were installed', 'Success')";
@@ -53,10 +53,17 @@ namespace extracting_algo
 
         private void StartConversion(object sender, RoutedEventArgs e)
         {
-            this.Title = "Starting... - Converter";
             globals.pathToHTML = textbox.Text;
             globals.pathToExcel = textbox2.Text;
             globals.pathToOutput = textbox3.Text;
+            if(!(File.Exists(globals.pathToHTML) || File.Exists(globals.pathToExcel) || Directory.Exists(globals.pathToOutput)))
+            {
+                this.Title= "Converter - Error";
+                MessageBox.Show("Invalid file or directory name!", "Error" , MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Title= "Converter";
+                return;
+            }
+            this.Title = "Starting... - Converter";
             //Debug
             var confirm = MessageBox.Show("Path to HTML: "+ globals.pathToHTML + "\nPath to Excel: " + globals.pathToExcel + "\nPath to output folder: " + globals.pathToOutput, "Is this information right?", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
             if (confirm == MessageBoxResult.OK)
