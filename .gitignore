@@ -1,4 +1,8 @@
-extracting-algo/bin/
+extracting-algo/bin/*
 extracting-algo/pip/
 extracting-algo/obj/
 extracting-algo/.vs/
+*.xlsx
+*.doc
+*.html
+*.json

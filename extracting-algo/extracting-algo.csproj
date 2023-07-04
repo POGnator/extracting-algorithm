@@ -6,6 +6,7 @@
     <RootNamespace>extracting_algo</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>New Project.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +28,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="New Project.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\filenames.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>filenames.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="main.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\filenames.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>filenames.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(ProjectDir)pip&quot; &quot;$(TargetDir)pip&quot; /E /Y /I" />
+  </Target>
 
 </Project>

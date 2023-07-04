@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="extracting_algo.Properties" GeneratedClassName="filenames">
+  <Profiles />
+  <Settings>
+    <Setting Name="htmlPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/path/to/input1.html</Value>
+    </Setting>
+    <Setting Name="xlsxPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/path/to/input2.xlsx</Value>
+    </Setting>
+    <Setting Name="outputPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">./</Value>
+    </Setting>
+    <Setting Name="SaveJSON" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

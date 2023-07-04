@@ -11,5 +11,6 @@ namespace extracting_algo
         public static string pathToHTML;
         public static string pathToExcel;
         public static string pathToOutput;
+        public static bool isInDebug = false;
     }
 }
