@@ -6,7 +6,7 @@
     <RootNamespace>extracting_algo</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>New Project.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="New Project.ico" />
+    <Content Include="logo.ico" />
   </ItemGroup>
 
   <ItemGroup>

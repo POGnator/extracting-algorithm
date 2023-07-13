@@ -2,7 +2,6 @@ extracting-algo/bin/*
 extracting-algo/pip/
 extracting-algo/obj/
 extracting-algo/.vs/
+test-files/
 *.xlsx
 *.doc
-*.html
-*.json
