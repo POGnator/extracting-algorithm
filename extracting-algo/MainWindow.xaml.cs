@@ -36,7 +36,7 @@ namespace extracting_algo
             saveJSON.IsChecked = Properties.filenames.Default.SaveJSON;
             useExtFile.IsChecked = Properties.filenames.Default.useFileFromExtension;
             //Install the required packages if not present
-            string strCmdText = "/C py ./pip/__main__.py install pandas openpyxl";
+            string strCmdText = "/C ./pip/__main__.py install pandas openpyxl";
             System.Diagnostics.ProcessStartInfo cmdproc = new System.Diagnostics.ProcessStartInfo();
             cmdproc.FileName = "CMD.exe";
             cmdproc.Arguments = strCmdText;
