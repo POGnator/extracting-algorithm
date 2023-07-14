@@ -34,6 +34,7 @@ namespace extracting_algo
             textbox2.Text = Properties.filenames.Default.xlsxPath;
             textbox3.Text = Properties.filenames.Default.outputPath;
             saveJSON.IsChecked = Properties.filenames.Default.SaveJSON;
+            useExtFile.IsChecked = Properties.filenames.Default.useFileFromExtension;
             //Install the required packages if not present
             string strCmdText = "/C py ./pip/__main__.py install pandas openpyxl";
             System.Diagnostics.ProcessStartInfo cmdproc = new System.Diagnostics.ProcessStartInfo();
@@ -84,12 +85,32 @@ namespace extracting_algo
             Properties.filenames.Default.xlsxPath = textbox2.Text;
             Properties.filenames.Default.outputPath = textbox3.Text;
             Properties.filenames.Default.SaveJSON = saveJSON.IsChecked ?? false;
+            Properties.filenames.Default.useFileFromExtension = useExtFile.IsChecked ?? false;
             Properties.filenames.Default.Save();
 
 
             Console.WriteLine("Files:");
+            //haha spaghetti code
+            if(Properties.filenames.Default.useFileFromExtension)
+            {
+                string pathName = @"%userprofile%\Downloads\";
+                //regex time, are you ready?
+                try
+                {
+                    //Console.WriteLine(Converter.GetFileNameWithHighestNumber(@"C:\Users\Gabriel\Downloads\"));
+                    globals.pathToHTML = pathName + Converter.GetFileNameWithHighestNumber(pathName);
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    MessageBox.Show("An error occured while trying to find the input .doc", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
-            globals.pathToHTML = textbox.Text;
+                }
+            }
+            else
+            {
+                globals.pathToHTML = textbox.Text;
+            }
             bool isLink = globals.pathToHTML.StartsWith("http://") || globals.pathToHTML.StartsWith("https://");
             Console.WriteLine("HTML:\n" + globals.pathToHTML + "\n- Exists: " + File.Exists(globals.pathToHTML).ToString() + "\n- Input file is a link: " + isLink);
 
@@ -112,7 +133,7 @@ namespace extracting_algo
             if (confirm == MessageBoxResult.OK)
             {
                 //Convert
-                Convert.ConvertToExcel(globals.pathToHTML, globals.pathToExcel, globals.pathToOutput, isLink);
+                Converter.ConvertToExcel(globals.pathToHTML, globals.pathToExcel, globals.pathToOutput, isLink);
             }
             this.Title = "Converter";
         }
@@ -145,6 +166,18 @@ namespace extracting_algo
             AllocConsole();
             Console.WriteLine("Debug mode started");
             globals.isInDebug = true;
+        }
+
+        private void setInactive(object sender, RoutedEventArgs e)
+        {
+            browseInput.IsEnabled = true;
+            textbox.IsEnabled = true;
+        }
+
+        private void setActive(object sender, RoutedEventArgs e)
+        {
+            browseInput.IsEnabled = false;
+            textbox.IsEnabled = false;
         }
     }
 }

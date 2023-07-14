@@ -8,19 +8,56 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Text.RegularExpressions;
+
 
 namespace extracting_algo
 {
-    class Convert
+    class Converter
     {
-        public static Convert ConvertToExcel(string html, string excel, string output, bool downloadFromNet)
+        public static string GetFileNameWithHighestNumber(string directoryPath)
         {
-            // If the input file is a webpage, first rip the users cookies and then download the file using those
+            string expandedPath = Environment.ExpandEnvironmentVariables(directoryPath);
+            string[] fileNames = Directory.GetFiles(expandedPath);
+            string regexPattern = @"^Quality-Check.*?(\d+)?\.doc$";
+            Regex regex = new Regex(regexPattern);
+
+            string highestFileName = null;
+            int highestNumber = -1;
+
+            foreach (string fileName in fileNames)
+            {
+                string baseFileName = Path.GetFileName(fileName);
+                Match match = regex.Match(baseFileName);
+
+                if (match.Success)
+                {
+                    if (match.Groups[1].Success)
+                    {
+                        int currentNumber = Convert.ToInt32(match.Groups[1].Value);
+
+                        if (currentNumber > highestNumber)
+                        {
+                            highestNumber = currentNumber;
+                            highestFileName = baseFileName;
+                        }
+                    }
+                    else
+                    {
+                        highestFileName = baseFileName;
+                    }
+                }
+            }
+
+            return highestFileName;
+        }
+        public static Converter ConvertToExcel(string html, string excel, string output, bool downloadFromNet)
+        {
             if (downloadFromNet)
             {
                 //TODO: implement
-                MessageBox.Show("Not yet implemented!", "Not implemented", MessageBoxButton.OK, MessageBoxImage.Error);
-                return new Convert();
+                MessageBox.Show("Use the web extension!", "No", MessageBoxButton.OK, MessageBoxImage.Error);
+                return new Converter();
             }
 
             System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
@@ -45,7 +82,7 @@ namespace extracting_algo
             }
             
 
-            return new Convert();
+            return new Converter();
         }
     }
 }

@@ -70,5 +70,17 @@ namespace extracting_algo.Properties {
                 this["SaveJSON"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool useFileFromExtension {
+            get {
+                return ((bool)(this["useFileFromExtension"]));
+            }
+            set {
+                this["useFileFromExtension"] = value;
+            }
+        }
     }
 }

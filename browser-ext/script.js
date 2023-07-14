@@ -23,7 +23,8 @@ try {
     //document.querySelector("#action-export-word-link").href;
     document.getElementById("com-atlassian-confluence").insertAdjacentHTML("beforeBegin", "<h1>i'm in ur walls</h1>");
     console.log(document.querySelector("#action-export-word-link").href);
-    download(document.querySelector("#action-export-word-link").href, "wordpage.doc");
+    window.open(document.querySelector("#action-export-word-link").href, "_blank")
+    //download(document.querySelector("#action-export-word-link").href, "wordpage.doc");
 }
 catch(err) {
     alert("An error occured: " + err.message);
