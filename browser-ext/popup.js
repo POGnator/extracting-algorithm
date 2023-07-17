@@ -27,6 +27,12 @@ async function injectScript() {
   });
 }
 
+document.getElementById("getHelp").addEventListener("click", function() {
+  chrome.tabs.create({
+    url: "help.html"
+  });
+});
+
 injectScript()
 
 

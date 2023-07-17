@@ -6,7 +6,7 @@
   "permissions": [
     "activeTab",
     "scripting",
-    "storage"
+    "tabs"
   ],
   "action": {
     "default_popup": "converter.html",
