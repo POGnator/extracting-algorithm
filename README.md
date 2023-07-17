@@ -6,7 +6,7 @@ Open Source GUI Application and CHrome Extension for special purposes
 * Execute **extracting-algo.exe**
 
 ## Extension
-...
+See [here](browser-ext/help.html)
 
 # 🏗 Building
 ## Build requirements:
