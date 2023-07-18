@@ -15,47 +15,25 @@ namespace extracting_algo
 {
     class Converter
     {
-        public static string GetFileNameWithHighestNumber(string directoryPath)
+        public static string GetRecentFile(string directoryPath)
         {
-            string expandedPath = Environment.ExpandEnvironmentVariables(directoryPath);
-            string[] fileNames = Directory.GetFiles(expandedPath);
-            string regexPattern = @"^Quality-Check.*?(\d+)?\.doc$";
-            Regex regex = new Regex(regexPattern);
-
-            string highestFileName = null;
-            int highestNumber = -1;
-
-            foreach (string fileName in fileNames)
+            string searchPattern = "Quality-Check*.doc";
+            string expandedDirectoryPath = Environment.ExpandEnvironmentVariables(directoryPath);
+            var directory = new DirectoryInfo(expandedDirectoryPath);
+            var matchingFiles = directory.GetFiles(searchPattern);
+            if(matchingFiles.Length == 0)
             {
-                string baseFileName = Path.GetFileName(fileName);
-                Match match = regex.Match(baseFileName);
-
-                if (match.Success)
-                {
-                    if (match.Groups[1].Success)
-                    {
-                        int currentNumber = Convert.ToInt32(match.Groups[1].Value);
-
-                        if (currentNumber > highestNumber)
-                        {
-                            highestNumber = currentNumber;
-                            highestFileName = baseFileName;
-                        }
-                    }
-                    else
-                    {
-                        highestFileName = baseFileName;
-                    }
-                }
+                MessageBox.Show("No files found in Download folder!", "No files found", MessageBoxButton.OK, MessageBoxImage.Error);
+                return "NotFound";
             }
 
-            return highestFileName;
+            return matchingFiles.OrderByDescending(f => f.LastWriteTime).First().ToString();
         }
         public static Converter ConvertToExcel(string html, string excel, string output, bool downloadFromNet)
         {
             if (downloadFromNet)
             {
-                //TODO: implement
+                //implemented in chrome extension
                 MessageBox.Show("Use the web extension!", "No", MessageBoxButton.OK, MessageBoxImage.Error);
                 return new Converter();
             }

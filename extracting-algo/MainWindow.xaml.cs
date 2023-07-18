@@ -36,7 +36,7 @@ namespace extracting_algo
             saveJSON.IsChecked = Properties.filenames.Default.SaveJSON;
             useExtFile.IsChecked = Properties.filenames.Default.useFileFromExtension;
             //Install the required packages if not present
-            string strCmdText = "/C ./pip/__main__.py install pandas openpyxl";
+            string strCmdText = "/C py ./pip/__main__.py install pandas openpyxl";
             System.Diagnostics.ProcessStartInfo cmdproc = new System.Diagnostics.ProcessStartInfo();
             cmdproc.FileName = "CMD.exe";
             cmdproc.Arguments = strCmdText;
@@ -97,8 +97,8 @@ namespace extracting_algo
                 //regex time, are you ready?
                 try
                 {
-                    //Console.WriteLine(Converter.GetFileNameWithHighestNumber(@"C:\Users\Gabriel\Downloads\"));
-                    globals.pathToHTML = pathName + Converter.GetFileNameWithHighestNumber(pathName);
+                    //Console.WriteLine(Converter.GetRecentFile(@"C:\Users\Gabriel\Downloads\"));
+                    globals.pathToHTML = Converter.GetRecentFile(pathName);
                 }
                 catch(Exception ex)
                 {
@@ -167,6 +167,8 @@ namespace extracting_algo
             Console.WriteLine("Debug mode started");
             globals.isInDebug = true;
         }
+
+        
 
         private void setInactive(object sender, RoutedEventArgs e)
         {
